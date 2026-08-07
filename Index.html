@@ -5,38 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Formulario Empleados</title>
     <style>
-      /* Estilos básicos, reemplazan el uso de border en la tabla */
-      .tabla { border-collapse: collapse; }
-      .tabla td, .tabla th { border: 1px solid #000; padding: 6px; }
+      .tabla { border-collapse: collapse; width: 100%; max-width: 720px; margin: 0 auto; }
+      .tabla th, .tabla td { border: 1px solid #000; padding: 6px; text-align: left; }
       .boton { padding: 6px 12px; }
+      .centrar { text-align: center; }
     </style>
   </head>
-
   <body>
-    <form name="empleados" class="formulario" action="informacion.php" method="POST" novalidate>
-      <table class="tabla">
-        <tr>
-          <td><label for="Identificacion">Identificación empleado</label></td>
-          <td><input id="Identificacion" type="text" name="Identificacion" required></td>
-        </tr>
-        <tr>
-          <td><label for="NomApellidos">Nombres y apellidos</label></td>
-          <td><input id="NomApellidos" type="text" name="NomApellidos" required></td>
-        </tr>
-        <tr>
-          <td><label for="Cargo">Cargo a desempeñar</label></td>
-          <td><input id="Cargo" type="text" name="Cargo" required></td>
-        </tr>
-        <tr>
-          <td><label for="Salario">Salario</label></td>
-          <td><input id="Salario" type="number" name="Salario" min="0" step="0.01" required></td>
-        </tr>
-        <tr>
-          <td colspan="2" style="text-align:center;">
-            <input type="submit" value="Enviar Datos" class="boton">
-          </td>
-        </tr>
-      </table>
-    </form>
+    <main>
+      <h1 style="text-align:center;">Formulario Empleados</h1>
+      <form name="empleados" class="formulario" action="informacion.php" method="POST" autocomplete="on">
+        <table class="tabla" role="table">
+          <tr>
+            <th scope="row"><label for="Identificacion">Identificación empleado</label></th>
+            <td><input id="Identificacion" type="text" name="Identificacion" required autocomplete="off" placeholder="Documento o ID"></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="NomApellidos">Nombres y apellidos</label></th>
+            <td><input id="NomApellidos" type="text" name="NomApellidos" required autocomplete="name" placeholder="Ej. Juan Pérez"></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="Cargo">Cargo a desempeñar</label></th>
+            <td><input id="Cargo" type="text" name="Cargo" required autocomplete="organization-title" placeholder="Ej. Analista"></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="Salario">Salario</label></th>
+            <td><input id="Salario" type="number" name="Salario" min="0" step="0.01" required placeholder="0.00" inputmode="decimal" aria-label="Salario bruto en la moneda local"></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="centrar">
+              <input type="submit" value="Enviar Datos" class="boton">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </main>
   </body>
-  </html>
+</html>
