@@ -1,40 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Formulario Empleados</title>
-    <style>
-      /* Estilos básicos, reemplazan el uso de border en la tabla */
-      .tabla { border-collapse: collapse; }
-      .tabla td, .tabla th { border: 1px solid #000; padding: 6px; }
-      .boton { padding: 6px 12px; }
-    </style>
   </head>
 
   <body>
-    <form name="empleados" class="formulario" action="informacion.php" method="POST" novalidate>
-      <table class="tabla">
+    <form name="empleados" class="formulario" action="informacion.php" method="POST">
+      <table class="tabla" border="1">
         <tr>
-          <td><label for="Identificacion">Identificación empleado</label></td>
-          <td><input id="Identificacion" type="text" name="Identificacion" required></td>
+          <td>Identificacion_Empleado</td>
+          <td><imput type="text" name="Identificacion"></td>
         </tr>
         <tr>
-          <td><label for="NomApellidos">Nombres y apellidos</label></td>
-          <td><input id="NomApellidos" type="text" name="NomApellidos" required></td>
+          <td>Nombres Apellidos</td>
+          <td><imput type="text" name="NomApellidos"</td>
         </tr>
         <tr>
-          <td><label for="Cargo">Cargo a desempeñar</label></td>
-          <td><input id="Cargo" type="text" name="Cargo" required></td>
+          <td>Cargo a Desempeñar</td>
+          <td><imput type="text" name="Cargo"></td>
         </tr>
         <tr>
-          <td><label for="Salario">Salario</label></td>
-          <td><input id="Salario" type="number" name="Salario" min="0" step="0.01" required></td>
+          <td>Salario</td>
+          <td><imput type="text" name="Salario"></td>
         </tr>
         <tr>
-          <td colspan="2" style="text-align:center;">
-            <input type="submit" value="Enviar Datos" class="boton">
-          </td>
+          <td><imput type="submit" value="Enviar Datos" class="boton"></td>
         </tr>
       </table>
     </form>
